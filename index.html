@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Minimal Interactive Starter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="color-scheme" content="light dark">
+  <!-- Import Map for ESM libraries -->
+  <script type="importmap">
+  {
+    "imports": {
+      "gsap": "https://esm.sh/gsap@3.12.5"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <header class="site-header" data-elevate>
+    <div class="container header-inner">
+      <a class="logo" href="#"><span>Minimal</span> Starter</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1 class="headline" data-reveal>Build clean, interactive web pages fast</h1>
+        <p class="subhead" data-reveal>Starter kit with modular JS, subtle animations, and accessible UI—no bundler needed.</p>
+        <div class="cta" data-reveal>
+          <a class="button" href="#features">Explore Features</a>
+        </div>
+      </div>
+      <figure class="hero-media" data-reveal>
+        <img src="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" alt="Abstract minimal imagery" width="1200" height="800" decoding="async">
+      </figure>
+    </section>
+
+    <section id="features" class="section container">
+      <h2 class="section-title" data-reveal>Features</h2>
+      <div class="feature-grid">
+        <article class="card" data-reveal>
+          <h3>Modular</h3>
+          <p>Readable code split into small ES modules for easy maintenance and extension.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>Performant</h3>
+          <p>IntersectionObserver + GPU-accelerated transitions. No heavy frameworks.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>Accessible</h3>
+          <p>Semantic markup, focus states, reduced motion support, and keyboard-friendly controls.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>Elegant</h3>
+          <p>Neutral palette, generous whitespace, and crisp typography using Noto Sans and Space Mono.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2 class="section-title" data-reveal>Gallery</h2>
+      <div class="gallery-grid" data-lightbox>
+        <a href="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" class="gallery-item" data-reveal>
+          <img src="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" alt="Gallery item 1">
+        </a>
+        <a href="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" class="gallery-item" data-reveal>
+          <img src="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" alt="Gallery item 2">
+        </a>
+        <a href="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" class="gallery-item" data-reveal>
+          <img src="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" alt="Gallery item 3">
+        </a>
+        <a href="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" class="gallery-item" data-reveal>
+          <img src="/a/85bb4fd2-46b7-4bd3-b489-64102fa61450" alt="Gallery item 4">
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title" data-reveal>Contact</h2>
+      <form class="contact-form" novalidate data-reveal>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" autocomplete="email" required>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <button class="button" type="submit">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Minimal Starter</p>
+      <a href="#" class="to-top" aria-label="Back to top">Top ↑</a>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" alt="">
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <!-- ...existing content... -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
